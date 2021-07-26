@@ -140,7 +140,7 @@ int main(void)
 	¼öÇĞÁ¡¼ö : 300
 
 	*/
-
+	//¼÷Á¦
 	map<int, StudentInfo*> StudentList;
 	StudentList.insert(make_pair(1, new StudentInfo("È«±æµ¿", 1, 2, 3)));
 	StudentList.insert(make_pair(2, new StudentInfo("ÀÓ²©Á¤", 10, 20, 30)));
