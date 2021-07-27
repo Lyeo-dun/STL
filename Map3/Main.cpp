@@ -41,7 +41,7 @@ public:
 class Player : public Object
 {
 public:
-	virtual void Initialize() { strKey = "Player"; }
+	virtual void Initialize()override { strKey = "Player"; }
 public:
 	Player() {}
 	virtual ~Player() {}
@@ -50,7 +50,7 @@ public:
 class Enemy : public Object
 {
 public:
-	virtual void Initialize() { strKey = "Enemy"; }
+	virtual void Initialize()override { strKey = "Enemy"; }
 public:
 	Enemy() {}
 	virtual ~Enemy() {}
@@ -59,7 +59,7 @@ public:
 class Bullet : public Object
 {
 public:
-	virtual void Initialize() { strKey = "Bullet"; }
+	virtual void Initialize()override { strKey = "Bullet"; }
 public:
 	Bullet() {}
 	virtual ~Bullet() {}
@@ -77,6 +77,13 @@ int main(void)
 	//ObjectList.insert(make_pair());
 	AddObject(CreateObeject<Player>()); //어딜가도 템플릿은 이런 형태로 많이 사용됨
 	
+	for(int i = 0; i < 3; ++i)
+		AddObject(CreateObeject<Bullet>());
+	
+	for(int i = 0; i < 4; ++i)
+		AddObject(CreateObeject<Enemy>());
+	
+	/*
 	AddObject(CreateObeject<Bullet>());
 	AddObject(CreateObeject<Bullet>());
 	AddObject(CreateObeject<Bullet>());
@@ -85,6 +92,7 @@ int main(void)
 	AddObject(CreateObeject<Enemy>());
 	AddObject(CreateObeject<Enemy>());
 	AddObject(CreateObeject<Enemy>());
+	*/
 
 	//출력하기
 	for (map<string, list<Object*>>::iterator iter = ObjectList.begin(); iter != ObjectList.end(); ++iter)
