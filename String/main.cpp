@@ -24,7 +24,15 @@ int main(void)
 
 	str3 += Buffer;
 	cout << str3 << endl;
+	cout << endl;
 
-	
+	string string1 = "AA";
+	string string2 = "AA";
+
+	if (string1 == string2)
+		cout << "같다" << endl;
+	else
+		cout << "다르다" << endl;
+		
 	return 0;
 }
