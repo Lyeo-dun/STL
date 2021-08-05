@@ -25,5 +25,6 @@ int main(void)
 	str3 += Buffer;
 	cout << str3 << endl;
 
+	
 	return 0;
 }
